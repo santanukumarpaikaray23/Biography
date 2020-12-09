@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my cv</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .print-area{
+            width: 80%;
+            margin : 20px auto;
+            
+        }
+        .print-area .header{
+            width:100%;
+            height:200px;
+            background-color:dimgray;
+            display:flex;
+            align-items: center;
+            position: relative;
+        }
+        .header img{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+            position:absolute;
+            top:50px;
+            left:69px;
+            border:5px solid white;
+            box-shadow: 3px 3px 10px black;
+            cursor: pointer;
+            transition: .5S;
+            user-select:none;
+            filter:grayscale(100%);
+            
+
+        }
+        .header img:hover{
+            filter: grayscale(0%);
+            transform: scale(1.05);
+           
+        }
+     .header-text{
+         color: white;
+         width:60%;
+         margin-left:auto;
+     }
+     .header-text h1{
+         font-size:40px;
+         font-weight:normal;
+     }
+     .header-text p{
+         font-size:20px;
+         color:lightgrey;
+     }
+     .content{
+         display:flex;
+         flex-wrap: wrap;
+          }
+          .left-area{
+              width:30%;
+              background-color:lightgrey;
+              text-align:center;
+              padding-bottom:5px;
+              
+          }
+        
+          .left-area .contact{
+              margin-top: 80px;
+              
+          }
+          .contact h4{
+              font-size:30px;
+              font-weight:normal;
+              margin:10px 0;
+          }
+          .contact h5{
+              font-size:18px;
+              margin:10px 0;
+          }
+          .contact p{
+              font-size:20px;
+          }
+          .skills{
+              margin-top: 0px;
+          } 
+          .skills h1{
+              font-size:25px;
+              font-weight:bold;
+              margin-top: 30px;
+          }
+          .skills ,.bars{
+              margin-top:5px;
+              display: grid;
+              grid-gap:18px 20px;
+              font-size:15px;
+              font-weight:bolder;
+              padding:0px 0px;
+          }
+          .bars span{
+              display: block;
+              width: 356px;
+              height:10px;
+              background-color:lightyellow;
+              margin-top: 10px;
+              border-radius: 50px;
+              position: relative;
+          }
+       
+
+          .bars span::before{
+              position:absolute;
+              content:"";
+              width:80%;
+              height:80%;
+              background-color:black;
+              top:50%;
+              left:2px;
+              transform:translatey(-50%);
+              border-radius:10px;
+          }
+          .follow h1{
+              margin-top:30px;
+              font-size:30px;
+              font-weight:bold;
+          }
+          .follow h4{
+              font-size:18px;
+              margin:10px 0;
+          }
+         .follow p{
+             font-size:15px;
+             color:gray;
+         }
+         .qualification h1{
+            margin-top:30px;
+              font-size:30px;
+              font-weight:bold;
+
+
+         }
+         .qualification p{
+              font-size:18px;
+              margin:10px 0;
+              color:gray;
+          }
+       
+
+    .right-area{
+        width:100px;
+        height:100px;
+        position:absolute;
+        top:220px;
+        right:800px;
+
+    }
+    .objective h1 {
+        width:425%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:10px;
+        padding-top:35px;
+        padding-left:50px;
+       
+
+    }
+    .objective p {
+        width:825%;
+        margin-left:-85px;
+       padding-bottom:20px;
+        padding-top:1px;
+        padding-left:50px;
+        text-align:justify;
+        color:gray;
+       
+
+    }
+    .professional h1{
+        width:425%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:10px;
+        padding-top:15px;
+        padding-left:50px;
+
+    }
+    .professional p{
+        width:825%;
+        margin-left:-85px;
+       padding-bottom:20px;
+        padding-top:1px;
+        padding-left:50px;
+        text-align:justify;
+        color:gray
+
+    }
+    .key h1{
+        width:425%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:10px;
+        padding-top:15px;
+        padding-left:50px;
+
+
+    }
+    .key p{
+        width:825%;
+        margin-left:-85px;
+       padding-bottom:20px;
+        padding-top:1px;
+        padding-left:50px;
+        text-align:justify;
+        color:gray
+
+
+    }
+    .certification h1{
+        width:825%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:10px;
+        padding-top:15px;
+        padding-left:50px;
+
+    }
+    .certification p{
+        width:825%;
+        margin-left:-85px;
+       padding-bottom:20px;
+        padding-top:1px;
+        padding-left:50px;
+        text-align:justify;
+        color:gray
+
+
+    }
+    .experience h1{
+        width:825%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:10px;
+        padding-top:15px;
+        padding-left:50px;
+
+    }
+    .experience p{
+        width:825%;
+        margin-left:-85px;
+       padding-bottom:20px;
+        padding-top:1px;
+        padding-left:50px;
+        text-align:justify;
+        color:gray
+
+
+    }
+    .experience h2{
+        width:825%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:10px;
+        padding-top:3px;
+        padding-left:50px;
+        color:gray;
+
+    }
+.detail h4{
+    width:825%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:0px;
+        padding-top:15px;
+        padding-left:50px;
+
+
+}
+.detail h1{
+    width:825%;
+        margin-left:-85px;
+        font-size:25px;
+        text-align:left;
+        padding-bottom:5px;
+        padding-top:-90px;
+        padding-left:50px;
+    
+}
+.detail p{
+    width:825%;
+        margin-left:-85px;
+       padding-bottom:20px;
+        padding-top:1px;
+        padding-left:50px;
+        text-align:justify;
+        color:gray
+
+}
+.detail h5{
+    width:825%;
+        margin-left:-85px;
+        font-size:20px;
+        text-align:left;
+        padding-bottom:5px;
+        padding-top:-90px;
+        padding-left:50px;
+
+
+}
+button{
+    font-size:25px;
+    padding:10px 20px;
+    margin: 50px 0 50px 140px;
+    background-color:rgb(83,83,83);
+    border:none;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    cursor:pointer;
+    transition: .5s;
+
+}
+button:hover{
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+    
+
+    </style>
+</head>
+<body>
+    <div class="print-area">
+        <div class="header">
+            <img src="WhatsApp Image 2020-10-09 at 6.14.17 PM.jpeg">
+            <div class="header-text">
+                <h1>SANTANU KUMAR PAIKARAY</h1>
+                <P>Angular Developer</P>
+                
+        </div>
+        
+           
+            </div>
+            <div class="content">
+                <div class="left-area">
+                   <div class="contact">
+                       <h2>CONTACT</h2>
+                       <h3>Phone</h3>
+                       <p>+91-8917310896</p>
+                       <h4>Email</h4>
+                       <p>santanupaikaray1996@gmail.com</p>
+                       <h5>Home</h5>
+                       <p>Uttarahalli,Bangalore,560061</p>
+                   
+                   </div>
+                   <div class="skills">
+                       <h1>PROGRAMMING SKILLS</h1>
+                       <div class="bars">
+                           <div class="bar">
+                               <p>Development Tools:Visual Studio Code,Eclipse</p>
+                               <span></span>
+                               </div>
+                               <div class="bar">
+                                <p>Web Technologies:HTML,CSS,JavaScript</p>
+                                <span></span>
+                           </div>
+                           <div class="bar">
+                            <p>Frameworks:Angular,Node Js</p>
+                            <span></span>
+                    </div>
+                    <div class="bar">
+                        <p>Back End:MS SQL,Mongo DB</p>
+                        <span></span>
+                        </div>
+                    </div>
+                    <div class="follow">
+                        <h1>FOLLOW ME</h1>
+                        <h4>Facebook</h4>
+                        <P>facebook.com/username</P>
+                        <h4>Twitter</h4>
+                        <P>twitter.com/username</P>
+                        <h4>LinkedIn</h4>
+                        <P>linkedin.com/username</P>
+                        <h4>Instagram</h4>
+                        <P>instagram.com/username</P>
+                    </div>
+                    <div class="qualification">
+                    <h1>ACADEMIC QUALIFICATION</h1>
+                    <p>B.tech(Comp.Sc),BPUT Univercity ,2018,76.22%.</p>
+                    <p>C.H.S.E(XII),AICS,BBSR,2014,53.34%.</p>
+                    <p>H.S.E(X),A.A.K.B.N High School,Puri,2012,69.11%.</p>
+
+                    </div>
+                    </div>
+                    
+
+                    <div class="right-area">
+                    <div class="objective">
+                   <h1>OBJECTIVE</h1> 
+                   <p>A self-motivated professional with strong analytical,
+                      communication and  Understanding the value of the time cost and quality of work and I can assure of the best commitment and productivity.</p>   
+                
+              </div>
+              <div class="professional">
+                  <h1>PROFESSIONAL EXPERIENCE</h1>
+                  <p>* 2years Hands-on experience in developing Web User Interface (UI) Using Angular, Angular JS, Javacript,Typescript,Bootstarp,HTML & CSS.</p>
+                   <p>* Thorough Knowledge In MongoDB,SQL& Database Concepts.</p>
+                   <p>* Quick Learner & Proficient in Solving the technical issues in the projec.</p>
+                   <p>* Work ethic and cooperative attitude.</p>
+                   <p>* Good expertise in the usage of data interchange formats like JSON & XML.</p>
+              </div>
+              <div class="key">
+                  <h1>KEY STRENGTH</h1>
+                  <P>* Experience of working with customers in Agile Scrum Methodology.</P>
+                  <p>* Worked with multiple teams during various Projects.</p>
+                  <p>* Working experience with Project management tools Git Hub.</p>
+                  <p>* Effective communication and Management Skills with technical support capabilities. </p>
+              </div>
+              <div class="certification">
+                  <h1>ACHIEVEMENT AND CERTIFICATION</h1>
+                  <p>* National Level Seminar(SoftComputing)</p>
+                  <p>* Fullstack Online Training(Naresh I Technologies)</p>
+
+              </div>
+              <div class="experience">
+                  <h1>EXPERIENCES</h1>
+                  <h2>Nr Technoserve pvt ltd.(Aug2019 to may2020) </h2>
+                  <p>Angular Developer</p>
+                  <h2>Dixit Infotech Services Pvt.Ltd.(19th june 2020 to 1st september) </h2>
+                  <p>Desktop Engineer</p>
+              </div>
+              <div class="detail">
+                  <h4>PROJECT DETAILS<h4>
+                  <h1>Online Student Admission System:</h1>
+                  <p>Purpose: Student Admission System Supports the student admission and registration process,the maintenance of student  personal academic and 
+                    fee related data</p>
+                    <h5>Software Required</h5>
+                    <p>Front end tools: HTML,CSS,JavaScript and Angular</p>
+                    <p>Back end tools: MS SQL</p>
+
+              </div>
+              
+        </div>
+        </div>
+        </div>
+        </div>
+        <button>Print CV</button>
+        <script src="all.min.js"></script>
+        <script>
+            var btn = document.queryselector("button");
+            btn.onclick = ()=>{
+                window.print();
+            }
+        </script>
+
+    
+</body>
+</html>
